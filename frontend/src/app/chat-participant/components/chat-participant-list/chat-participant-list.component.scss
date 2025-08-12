@@ -1,0 +1,67 @@
+$base-min-height: 48px;
+$base-max-height: 1030px;
+@mixin base-height {
+  min-height: $base-min-height;
+  max-height: $base-max-height;
+}
+$base-shadow-color: #3f51b5;
+$base-border-radius: 15px;
+
+table {
+    width: 100%;
+  }
+
+.chatParticipantElement {
+  padding-right: 24px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+.chatParticipantsRow {
+    white-space: pre-line;
+    @include base-height;
+}
+
+.chatParticipantsCell {
+    @include base-height;
+}
+
+.formFieldMargin{
+    margin-top: 10px;
+}
+
+.findMargin{
+    margin-right: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+.mat-raised-button{
+    border-radius: 10px;
+}
+
+::ng-deep table.mat-table {
+    border-radius: $base-border-radius;
+}
+
+::ng-deep .mat-table {
+    background: none !important;
+    box-shadow: 2px 8px 4px -4px $base-shadow-color, 2px 4px 4px $base-shadow-color,
+    2px 6px 12px $base-shadow-color !important;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+    /* border-radius: 15px; */
+    border-radius: $base-border-radius $base-border-radius $base-border-radius $base-border-radius;
+    margin-bottom: 10px;
+}
+
+::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0px;
+}
+
+tr.mat-row:last-of-type td.mat-cell:first-of-type, tr.mat-row:last-of-type td.mat-cell:last-of-type {
+    border-bottom-style: none;
+}

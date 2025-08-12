@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const environment = {\n  production: true,\n  apiURL: \"https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com/api/v1\",\n  authURL: \"https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com\"\n};","map":null,"metadata":{},"sourceType":"module"}

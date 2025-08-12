@@ -1,0 +1,7 @@
+<p>
+    <mat-toolbar color="primary">
+      <span>Chat</span>
+      <span class="center" *ngIf="this.authService.isAuthenticated() && this.getUserEmail()">&nbsp;&nbsp;&nbsp;&nbsp;Welcome {{this.getUserEmail()}} !</span>
+    </mat-toolbar>
+  </p>
+  

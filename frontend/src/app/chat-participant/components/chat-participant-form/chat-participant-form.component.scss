@@ -1,0 +1,48 @@
+$base-min-width: 500px;
+$base-max-width: 800px;
+$base-full-width: 100%;
+@mixin base-width {
+  min-width: $base-min-width;
+  max-width: $base-max-width;
+}
+$base-shadow-color: #3f51b5;
+$base-border-radius: 15px;
+
+.chat-participant-form {
+    @include base-width;
+    width: $base-full-width;
+}
+
+.field-full-width {
+  width: $base-full-width;
+}
+
+.form-card {
+    @include base-width;
+    margin:auto;
+}
+
+.button-group {  
+    margin-bottom: 15px;
+    button {
+        margin-right: 10px;
+        float: right;
+    }
+}
+
+.mat-card:not([class*=mat-elevation-z]) {
+  box-shadow: 2px 8px 4px -4px $base-shadow-color, 2px 4px 4px $base-shadow-color,
+  2px 6px 12px $base-shadow-color;
+}
+
+mat-card{
+  border-radius: $base-border-radius;
+}
+
+.mat-raised-button{
+  border-radius: 10px;
+}
+
+::ng-deep .mat-form-field-wrapper {
+    padding-bottom: 0px;
+}

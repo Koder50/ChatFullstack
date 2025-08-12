@@ -1,0 +1,40 @@
+<mat-card class="form-card">
+    <h2>{{selectedChatParticipant ? "Update/View Speaker" : "Create Speaker"}}</h2>
+    <form class="chat-participant-form" [formGroup]="form">
+        <mat-form-field class="field-full-width" appearance="fill">
+            <mat-label>Speaker</mat-label>
+            <input matInput formControlName="speaker"
+                   placeholder="Ex. teacher@mail.com">
+        </mat-form-field>
+    
+    
+        <mat-form-field class="field-full-width" appearance="fill">
+            <mat-label>Content</mat-label>
+            <input matInput formControlName="talkContent"
+                   placeholder="Ex. Hello!">
+        </mat-form-field>
+        <div class="button-group">
+
+        <mat-form-field class="field-full-width" appearance="fill">
+          <mat-label>CreatedAt</mat-label>
+          <input matInput formControlName="createdAt"
+          placeholder="Ex. 2024-06-03 13:20:00 UTC">
+        </mat-form-field>
+
+        <mat-form-field class="field-full-width" appearance="fill">
+                <mat-label>ChatWith</mat-label>
+                <input matInput formControlName="chatWith"
+                       placeholder="Ex. student@mail.com">
+        </mat-form-field>
+
+            <button mat-raised-button color="primary" (click)="emitAction()">
+                 {{actionButtonLabel}}
+            </button>  
+            &nbsp;
+            <button  mat-raised-button color="warn" (click)="clear()">
+                 Clear
+            </button> 
+        </div>
+    
+    </form>
+</mat-card>

@@ -1,0 +1,55 @@
+
+:host {
+    display: flex;
+    justify-content: center;
+    margin: 100px 0px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    min-width: 300px;
+  }
+  
+  mat-card-title,
+  mat-card-content {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .error {
+    padding: 16px;
+    width: 300px;
+    color: white;
+    background-color: red;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .link {
+      cursor: pointer;
+      text-decoration: underline;
+      
+  }
+
+  .mat-card:not([class*=mat-elevation-z]) {
+      box-shadow: 2px 8px 4px -4px #3f51b5, 2px 4px 4px #3f51b5, 2px 6px 12px #3f51b5;
+  }
+
+  ::ng-deep .mat-form-field-label{
+    color:#3f51b5 !important;
+  }
+
+  ::ng-deep .mat-form-field-underline .mat-form-field-ripple{
+    background-color:#3f51b5 !important;
+  }
+
+  ::ng-deep .mat-form-field-underline{
+    background-color:#3f51b5 !important;
+  }
+
+  .matcard{
+    border-radius: 15px;
+  }

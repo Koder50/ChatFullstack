@@ -1,0 +1,58 @@
+<table mat-table [dataSource]="this.dataSource" [class.hidden]="this.isHidden()" matSort
+       class="mat-elevation-z8">
+    <!-- Data for columns -->
+    <ng-container *ngFor="let item of headers" [matColumnDef]="item.fieldName">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header> {{item.headerName}} </th>
+      <td mat-cell *matCellDef="let element" class="chatParticipantElement"> {{element[item.fieldName]}} </td>
+    </ng-container>
+    <!-- Actions for specific item -->
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef> Actions </th>
+        <td mat-cell *matCellDef="let element" class="chatParticipantsCell">
+            <button (click)="selectChatParticipant(element, 0)" mat-raised-button color="primary"
+                    *ngIf="this.areViewActionAndDeleteActionVisible(element)">
+                <mat-icon>pageview</mat-icon> View
+            </button>  
+            &nbsp;
+            <button (click)="selectChatParticipant(element, 1)" mat-raised-button color="warn"
+                    *ngIf="this.areViewActionAndDeleteActionVisible(element)">
+                <mat-icon>delete</mat-icon> Delete
+            </button>
+
+
+        </td>  
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="headerFields"></tr>
+    <tr mat-row *matRowDef="let row; columns: headerFields" class="chatParticipantsRow"></tr>
+  </table>
+
+<ng-container>
+    <form [formGroup]="blockedForm">
+        <mat-form-field appearance="fill" [ngClass]="{'formFieldMargin': true}">
+            <mat-label>Blocked users list: </mat-label>
+            <input matInput formControlName="blocked"
+                   (input)="hideChat()"
+                   placeholder="Ex. student@mail.com,user@mail.com">
+        </mat-form-field>
+        <br/>
+        <button type="submit" (click)="handleBlockedListInFormAndInDatabaseAndInNgrx()"
+                mat-raised-button color="primary">Block users</button>
+    </form>
+</ng-container>
+
+ <ng-container>
+     <form [formGroup]="personForm">
+         <mat-form-field appearance="fill" [ngClass]="{'formFieldMargin': true}">
+             <mat-label>Chat with: </mat-label>
+             <input matInput formControlName="mailName"
+                    (input)="hideChat()"
+                    placeholder="Ex. student@mail.com">
+         </mat-form-field>
+         <br />
+         <button type="submit" mat-raised-button color="primary" [ngClass]="{'findMargin': true}"
+                 (click)="checkIfUserEmailFoundAndNotBlocked()">Find</button>
+         <button type="submit" *ngIf="this.isUserEmailFoundAndNotBlocked" (click)="createChat()"
+                 mat-raised-button color="primary">Create chat</button>
+     </form>
+ </ng-container>
