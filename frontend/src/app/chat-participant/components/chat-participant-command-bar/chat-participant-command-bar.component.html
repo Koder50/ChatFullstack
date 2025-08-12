@@ -1,0 +1,35 @@
+<p>
+    <mat-toolbar>
+        <button mat-raised-button color="primary" (click)="emitAction(0)"
+                [ngClass]="{'hidden': this.chatParticipantService.isChatCreated!=true}">
+            <mat-icon>fiber_new</mat-icon> Create
+        </button>  
+        &nbsp;
+        <button  mat-raised-button color="warn" (click)="emitAction(1)"
+                 [ngClass]="{'hidden': this.chatParticipantService.isChatCreated!=true
+                 || this.isNotCurrentUserSuperuser()}">
+            <mat-icon>delete</mat-icon> Delete All
+        </button>
+
+        <button mat-raised-button color="primary" (click)="emitAction(3)"
+                *ngIf="this.isRefreshSameAsInput('false')"
+                [ngClass]="{'hidden': this.chatParticipantService.isChatCreated!=true,
+                            'buttonMarginLeft': true}">
+            <mat-icon>refresh</mat-icon> Start Refresh
+        </button>
+
+        <button mat-raised-button color="primary" (click)="emitAction(3)"
+                *ngIf="this.isRefreshSameAsInput('true')"
+                [ngClass]="{'hidden': this.chatParticipantService.isChatCreated!=true,
+                            'buttonMarginLeft': true}">
+            <mat-icon>refresh</mat-icon> Stop Refresh
+        </button>
+
+        <button  mat-raised-button color="accent" (click)="emitAction(2)"
+                 [ngClass]="{'buttonMarginLeft': true}">
+            <mat-icon>power_settings_new</mat-icon> Log Out
+        </button>
+
+    </mat-toolbar>
+  </p>
+  

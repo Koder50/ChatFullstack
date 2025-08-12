@@ -1,0 +1,8 @@
+
+<!-- Dumb component command bar -->
+<app-chat-participant-command-bar (action)="executeCommandBarAction($event)"></app-chat-participant-command-bar>
+<!-- Dumb component anti hero list -->
+<app-chat-participant-list [chatParticipants]="chatParticipants"
+                           (chatParticipant)="selectChatParticipant($event)"
+                           [blockedUsersLists]="blockedUsersLists"
+                           [headers]="headers"></app-chat-participant-list>
