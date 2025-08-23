@@ -7,8 +7,8 @@ You can block also users, with which you don't want to talk. Every chat has its 
 (database is used).
 
 ## Technologies
-Spring Boot, Angular, CSS, Typescript, HTML, Java 17, Spring Data JPA, Swagger UI, 
-Spring Security, JUnit, AssertJ, NGRX, Maven, Postgresql
+Spring Boot,<br> Angular, <br>CSS, <br>Typescript,<br> HTML, <br>Java 17, <br>Spring Data JPA, <br>Swagger UI, 
+<br>Spring Security, <br>JUnit, <br>AssertJ, <br>NGRX, <br>Maven, <br>Postgresql
 
 ## Swagger
 http://localhost:8080/swagger-ui/index.html
@@ -37,6 +37,7 @@ I am using IntelliJ Idea:
 19. There should be one line found - double click on it. Now you have to specify those path as public\\index.html
 20. Now do 4.(clean install) and do 12. ( run configuration). Check if login and logut works.
 21. Until now everything should work(as you see, you needed to experiment with index.html path). You can chat now, good luck.
+
 
 
 
