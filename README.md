@@ -55,7 +55,8 @@ I am using IntelliJ Idea:
 8. Making Swagger.
 
 ## Live Demo
-On Heroku: anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging like in section "O mnie" point 6. on https://www.linkedin.com/in/karol-g%C3%B3ralczyk-74a6a8295/
+On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging like in section "O mnie" point 6. on https://www.linkedin.com/in/karol-g%C3%B3ralczyk-74a6a8295/
+
 
 
 
