@@ -4,7 +4,7 @@ A fullstack chat application where **two users can communicate privately**.
 Multiple users can be logged in simultaneously, chats are persisted in a database, and chat history is automatically deleted every hour (demo mode).  
 
 ## Live Demo
-localhost:8080 : logging extends functionality; 𝗹𝗼𝗴𝗶𝗻: student@mail.com, 𝗽𝗮𝘀𝘀: Chatanti1; 𝗹𝗼𝗴𝗶𝗻: teacher@mail.com, 𝗽𝗮𝘀𝘀: Chatanti1
+localhost:8080 : logging extends functionality; 𝗹𝗼𝗴𝗶𝗻: student@mail.com, 𝗽𝗮𝘀𝘀: Chatanti1; 𝗹𝗼𝗴𝗶𝗻: teacher@mail.com, 𝗽𝗮𝘀𝘀: Chatanti1<br>
 On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: 𝗹𝗼𝗴𝗶𝗻: karol@mail7.com, 𝗽𝗮𝘀𝘀: Chatanti1; 𝗹𝗼𝗴𝗶𝗻: karol@mail8.com, 𝗽𝗮𝘀𝘀: Chatanti2
 
 ## Features:  
@@ -74,6 +74,7 @@ I am using IntelliJ Idea:
 6. Making possible multiple different chats simultaneously for one account(condition: different devices or incognito mode - for each one instance of chat).
 7. Saving chat messages in database chronologically.
 8. Making Swagger.
+
 
 
 
