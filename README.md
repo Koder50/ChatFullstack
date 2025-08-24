@@ -6,6 +6,11 @@ when you for example use Google Chrome for one card, and another card in incogni
 You can block also users, with which you don't want to talk. Every chat has its own records 
 (database is used).
 
+## Screenshots
+<img width="1912" height="968" alt="chatFullstack1" src="https://github.com/user-attachments/assets/2d2e6770-e62d-4db7-a13f-5f52dedfc3e6" />
+<img width="1917" height="965" alt="chatFullstack2" src="https://github.com/user-attachments/assets/716484a2-e9d2-48de-afb6-5d60e8be5d34" />
+<img width="1911" height="965" alt="chatFullstack3" src="https://github.com/user-attachments/assets/2fe1b767-d87b-4b4d-ba70-a77b33be2bfc" />
+
 ## Technologies
 Spring Boot,<br> Angular, <br>CSS, <br>Typescript,<br> HTML, <br>Java 17, <br>Spring Data JPA, <br>Swagger UI, 
 <br>Spring Security, <br>JUnit, <br>AssertJ, <br>NGRX, <br>Maven, <br>Postgresql
@@ -13,7 +18,7 @@ Spring Boot,<br> Angular, <br>CSS, <br>Typescript,<br> HTML, <br>Java 17, <br>Sp
 ## Swagger
 http://localhost:8080/swagger-ui/index.html
 
-## How to use
+## Installation and usage
 I am using IntelliJ Idea:
 
 1. Download Zip File from github(on main page of repository find green button 'Code', click it and then find and click 'Download Zip')
@@ -49,10 +54,8 @@ I am using IntelliJ Idea:
 7. Saving chat messages in database chronogically.
 8. Making Swagger.
 
-## Screens
-<img width="1912" height="968" alt="chatFullstack1" src="https://github.com/user-attachments/assets/2d2e6770-e62d-4db7-a13f-5f52dedfc3e6" />
-<img width="1917" height="965" alt="chatFullstack2" src="https://github.com/user-attachments/assets/716484a2-e9d2-48de-afb6-5d60e8be5d34" />
-<img width="1911" height="965" alt="chatFullstack3" src="https://github.com/user-attachments/assets/2fe1b767-d87b-4b4d-ba70-a77b33be2bfc" />
+
+
 
 
 
