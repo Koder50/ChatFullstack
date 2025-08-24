@@ -1,4 +1,4 @@
-# ChatFullstack 💬
+# ChatFullstack
 
 A fullstack chat application where **two users can communicate privately**.  
 Multiple users can be logged in simultaneously, chats are persisted in a database, and chat history is automatically deleted every hour (demo mode).  
@@ -15,15 +15,15 @@ On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: 𝗹�
 - Swagger API documentation
 
 ## Table of Contents
-[here](#ChatFullstack)
-[here](#Live)
-[here](#Features)
-[here](#Table)
-[here](#Technologies)
-[here](#Screenshots)
-[here](#Swagger)
-[here](#Installation)
-[here](#Challenges)
+[ChatFullstack](#ChatFullstack)
+[Live](#Live)
+[Features](#Features)
+[Table](#Table)
+[Technologies](#Technologies)
+[Screenshots](#Screenshots)
+[Swagger](#Swagger)
+[Installation](#Installation)
+[Challenges](#Challenges)
 
 ## Screenshots
 <img width="1912" height="968" alt="chatFullstack1" src="https://github.com/user-attachments/assets/2d2e6770-e62d-4db7-a13f-5f52dedfc3e6" />
@@ -73,6 +73,7 @@ I am using IntelliJ Idea:
 6. Making possible multiple different chats simultaneously for one account(condition: different devices or incognito mode - for each one instance of chat).
 7. Saving chat messages in database chronologically.
 8. Making Swagger.
+
 
 
 
