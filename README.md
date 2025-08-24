@@ -16,15 +16,15 @@ On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: ùóπ
 - Swagger API documentation
 
 ## Table of Contents
-[ChatFullstack](#ChatFullstack) <br>
-[Live Demo](#Live-demo) <br>
-[Features](#Features) <br>
-[Table of Contents](#Table-of-Contents) <br>
-[Screenshots](#Screenshots) <br>
-[Technologies](#Technologies) <br>
-[Swagger](#Swagger) <br>
-[Installation and usage](#Installation-and-usage) <br>
-[Challenges](#Challenges) <br>
+- [ChatFullstack](#ChatFullstack) 
+- [Live Demo](#live-demo) 
+- [Features](#Features) 
+- [Table of Contents](#table-of-contents) 
+- [Screenshots](#Screenshots) 
+- [Technologies](#Technologies) 
+- [Swagger](#Swagger) 
+- [Installation and usage](#installation-and-usage) 
+- [Challenges](#Challenges) 
 
 ## Screenshots
 <img width="1912" height="968" alt="chatFullstack1" src="https://github.com/user-attachments/assets/2d2e6770-e62d-4db7-a13f-5f52dedfc3e6" />
@@ -74,6 +74,7 @@ I am using IntelliJ Idea:
 6. Making possible multiple different chats simultaneously for one account(condition: different devices or incognito mode - for each one instance of chat).
 7. Saving chat messages in database chronologically.
 8. Making Swagger.
+
 
 
 
