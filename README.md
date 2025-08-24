@@ -35,7 +35,7 @@ On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: ğ—¹ğ
 - Spring Boot
 - Angular
 - CSS
-- Typescript
+- TypeScript
 - HTML
 - Java 17
 - Spring Data JPA
@@ -45,7 +45,7 @@ On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: ğ—¹ğ
 - AssertJ
 - NGRX
 - Maven
-- Postgresql
+- PostgreSQL
 
 ## Swagger
 http://localhost:8080/swagger-ui/index.html
@@ -86,6 +86,7 @@ I am using IntelliJ Idea:
 6. Making possible multiple different chats simultaneously for one account(condition: different devices or incognito mode - for each one instance of chat).
 7. Saving chat messages in database chronologically.
 8. Making Swagger.
+
 
 
 
