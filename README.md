@@ -1,10 +1,18 @@
-# Project
-It is a project of Chat. It is configured in such a way, that precisely two users can talk in one chat. 
-Many users can be logged simultaneously. Every new hour all chat records are deleted (it is presentational 
-chat, it should just show that it works). You can be logged as two users in the same time, 
-when you for example use Google Chrome for one card, and another card in incognito state.
-You can block also users, with which you don't want to talk. Every chat has its own records 
-(database is used).
+# ChatFullstack 💬
+
+A fullstack chat application where **two users can communicate privately**.  
+Multiple users can be logged in simultaneously, chats are persisted in a database, and chat history is automatically deleted every hour (demo mode).  
+
+## Live Demo
+On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: 𝗹𝗼𝗴𝗶𝗻: karol@mail7.com, 𝗽𝗮𝘀𝘀: Chatanti1; 𝗹𝗼𝗴𝗶𝗻: karol@mail8.com, 𝗽𝗮𝘀𝘀: Chatanti2
+
+## Features:  
+- Two-user private chats  
+- User blocking  
+- Multiple simultaneous sessions (different browsers/incognito)  
+- Automatic chat history cleanup  
+- Secure authentication with Spring Security  
+- Swagger API documentation  
 
 ## Screenshots
 <img width="1912" height="968" alt="chatFullstack1" src="https://github.com/user-attachments/assets/2d2e6770-e62d-4db7-a13f-5f52dedfc3e6" />
@@ -17,6 +25,7 @@ Spring Boot,<br> Angular, <br>CSS, <br>Typescript,<br> HTML, <br>Java 17, <br>Sp
 
 ## Swagger
 http://localhost:8080/swagger-ui/index.html
+
 
 ## Installation and usage
 I am using IntelliJ Idea:
@@ -37,10 +46,10 @@ I am using IntelliJ Idea:
 14. Now you can log in. There you use chat.
 15. If there is some kind of problem with login or logout you in program click ctrl+shift+R type public\\index.html (double '\\') and click enter(search)
 16. There should be one line found - double click on it. Now you have to specify those path for the current project path of index.html(find this file, right click on it choose 'Copy Path' and choose absolute path)
-17. Now do 4.(clean install) and do 12. ( run configuration). Check if login and logut works.
+17. Now do 4.(clean install) and do 12. ( run configuration). Check if login and logout works.
 18. If not, in program click ctrl+shift+R type frontend\src\index.html and click enter(search)
 19. There should be one line found - double click on it. Now you have to specify those path as public\\index.html
-20. Now do 4.(clean install) and do 12. ( run configuration). Check if login and logut works.
+20. Now do 4.(clean install) and do 12. ( run configuration). Check if login and logout works.
 21. Until now everything should work(as you see, you needed to experiment with index.html path). You can chat now, good luck.
 
 ## Challenges
@@ -51,11 +60,9 @@ I am using IntelliJ Idea:
 4. Logging to app for many accounts simultaneously.
 5. Making each account see only chat with selected other person.
 6. Making possible multiple different chats simultaneously for one account(condition: different devices or incognito mode - for each one instance of chat).
-7. Saving chat messages in database chronogically.
+7. Saving chat messages in database chronologically.
 8. Making Swagger.
 
-## Live Demo
-On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging like in section "O mnie" point 6. on https://www.linkedin.com/in/karol-g%C3%B3ralczyk-74a6a8295/
 
 
 
