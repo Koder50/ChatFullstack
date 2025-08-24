@@ -38,6 +38,22 @@ I am using IntelliJ Idea:
 20. Now do 4.(clean install) and do 12. ( run configuration). Check if login and logut works.
 21. Until now everything should work(as you see, you needed to experiment with index.html path). You can chat now, good luck.
 
+## Challenges
+
+1. Updating chat messages.
+2. Making two persons' conversation in each chat.
+3. Setting blocked persons' list.
+4. Logging to app for many accounts simultaneously.
+5. Making each account see only chat with selected other person.
+6. Making possible multiple different chats simultaneously for one account(condition: different devices or incognito mode - for each one instance of chat).
+7. Saving chat messages in database chronogically.
+8. Making Swagger.
+
+## Screens
+<img width="1912" height="968" alt="chatFullstack1" src="https://github.com/user-attachments/assets/2d2e6770-e62d-4db7-a13f-5f52dedfc3e6" />
+<img width="1917" height="965" alt="chatFullstack2" src="https://github.com/user-attachments/assets/716484a2-e9d2-48de-afb6-5d60e8be5d34" />
+<img width="1911" height="965" alt="chatFullstack3" src="https://github.com/user-attachments/assets/2fe1b767-d87b-4b4d-ba70-a77b33be2bfc" />
+
 
 
 
