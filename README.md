@@ -7,6 +7,11 @@ Multiple users can be logged in simultaneously, chats are persisted in a databas
 localhost:8080 : logging extends functionality; 𝗹𝗼𝗴𝗶𝗻: student@mail.com, 𝗽𝗮𝘀𝘀: Chatanti1; 𝗹𝗼𝗴𝗶𝗻: teacher@mail.com, 𝗽𝗮𝘀𝘀: Chatanti1<br>
 On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: 𝗹𝗼𝗴𝗶𝗻: karol@mail7.com, 𝗽𝗮𝘀𝘀: Chatanti1; 𝗹𝗼𝗴𝗶𝗻: karol@mail8.com, 𝗽𝗮𝘀𝘀: Chatanti2
 
+![Java](https://img.shields.io/badge/Java-17-blue) 
+![Spring Boot](https://img.shields.io/badge/SpringBoot-3.x-brightgreen)
+![Angular](https://img.shields.io/badge/Angular-17-red)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)
+
 ## Features:  
 - Two-user private chats  
 - User blocking  
@@ -32,19 +37,19 @@ On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: 𝗹�
 <img width="1911" height="965" alt="chatFullstack3" src="https://github.com/user-attachments/assets/2fe1b767-d87b-4b4d-ba70-a77b33be2bfc" />
 
 ## Technologies
-- Spring Boot,
-- Angular,
-- CSS,
-- Typescript,
-- HTML,
-- Java 17,
-- Spring Data JPA,
-- Swagger UI, 
-- Spring Security,
-- JUnit,
-- AssertJ,
-- NGRX,
-- Maven,
+- Spring Boot
+- Angular
+- CSS
+- Typescript
+- HTML
+- Java 17
+- Spring Data JPA
+- Swagger UI 
+- Spring Security
+- JUnit
+- AssertJ
+- NGRX
+- Maven
 - Postgresql
 
 ## Swagger
@@ -84,8 +89,9 @@ I am using IntelliJ Idea:
 4. Logging to app for many accounts simultaneously.
 5. Making each account see only chat with selected other person.
 6. Making possible multiple different chats simultaneously for one account(condition: different devices or incognito mode - for each one instance of chat).
-7. Saving chat messages in database chronogically.
+7. Saving chat messages in database chronologically.
 8. Making Swagger.
+
 
 
 
