@@ -32,8 +32,20 @@ On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: ùóπ
 <img width="1911" height="965" alt="chatFullstack3" src="https://github.com/user-attachments/assets/2fe1b767-d87b-4b4d-ba70-a77b33be2bfc" />
 
 ## Technologies
-Spring Boot,<br> Angular, <br>CSS, <br>Typescript,<br> HTML, <br>Java 17, <br>Spring Data JPA, <br>Swagger UI, 
-<br>Spring Security, <br>JUnit, <br>AssertJ, <br>NGRX, <br>Maven, <br>Postgresql
+- Spring Boot,
+- Angular,
+- CSS,
+- Typescript,
+- HTML,
+- Java 17,
+- Spring Data JPA,
+- Swagger UI, 
+- Spring Security,
+- JUnit,
+- AssertJ,
+- NGRX,
+- Maven,
+- Postgresql
 
 ## Swagger
 http://localhost:8080/swagger-ui/index.html
@@ -72,8 +84,9 @@ I am using IntelliJ Idea:
 4. Logging to app for many accounts simultaneously.
 5. Making each account see only chat with selected other person.
 6. Making possible multiple different chats simultaneously for one account(condition: different devices or incognito mode - for each one instance of chat).
-7. Saving chat messages in database chronologically.
+7. Saving chat messages in database chronogically.
 8. Making Swagger.
+
 
 
 
