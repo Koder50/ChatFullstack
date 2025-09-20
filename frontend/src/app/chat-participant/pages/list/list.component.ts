@@ -15,7 +15,7 @@ import { ChatParticipantService } from '../../services/chat-participant.service'
 import { BlockedUsersList } from 'src/app/blocked-users-list/models/blocked-users-list.interface';
 import { BlockedUsersListActions } from 'src/app/blocked-users-list/state/blocked-users-list.actions';
 import { selectBlockedUsersLists } from 'src/app/blocked-users-list/state/blocked-users-list.selectors';
-
+import { SocketService } from 'src/app/socket.service';
 
 @Component({
   selector: 'app-list',
@@ -42,8 +42,11 @@ export class ListComponent implements OnInit {
 
   chatParticipantsToDelete: ChatParticipant[]=[];
   chatParticipantService: ChatParticipantService;
+  myInterval: any;
+  counter: number=0;
 
   constructor(
+    private socketService: SocketService,
     private router: Router,
     private store: Store<AppState>,
     chatParticipantService: ChatParticipantService
@@ -62,12 +65,24 @@ export class ListComponent implements OnInit {
     this.store.dispatch({type: BlockedUsersListActions.GET_BLOCKED_USERS_LIST_LIST});
     this.assignBlockedUsersLists();
 
-    setInterval(() =>{
-        if(localStorage.getItem("mainPage")=="true" && localStorage.getItem("refresh")=='true') {
+    /*this.myInterval=setInterval(() =>{
+        if(localStorage.getItem("mainPage")=="true" && localStorage.getItem("refresh")=='true' && this.chatParticipantService.isChatCreated==true) {
+        this.socketService.sendMessage("Napisałem początek!");
+        //this._cPChange=1;
+        //console.log(++this.counter);
+        clearInterval(this.myInterval);
+        }
+    },2000);*/
+
+    /*this.myInterval=setInterval(() =>{
+        if(localStorage.getItem("mainPage")=="true" && localStorage.getItem("refresh")=='true' && this.chatParticipantService.isChatCreated==true) {
             this.deleteTooOldPosts();
             this.store.dispatch({type: ChatParticipantActions.GET_CHAT_PARTICIPANT_LIST});
+            console.log(++this.counter);
+            clearInterval(this.myInterval);
         }
-    },2000);
+
+    },2000);*/
 
   }
 
@@ -82,6 +97,7 @@ export class ListComponent implements OnInit {
         if(data[i].createdAt==undefined || data[i].createdAt==null) data.splice(i, 1);
       }
       this.chatParticipants = data;
+
     });
   }
 
@@ -151,4 +167,5 @@ export class ListComponent implements OnInit {
           }
       }
   }
+
 }

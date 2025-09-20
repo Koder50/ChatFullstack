@@ -3,17 +3,18 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, tap, throwError,filter,map } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { ChatParticipant } from '../models/chat-participant.interface';
+import { SocketService } from 'src/app/socket.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ChatParticipantService {
 
-  isChatCreated:boolean = false;
+  private _isChatCreated:boolean = false;
   chatWith: string;
   blocked: string[]=[];
 
-  constructor(private http: HttpClient) { }
+  constructor(private socketService: SocketService,private http: HttpClient) { }
 
   getChatParticipants(): Observable<ChatParticipant[]> {
       return this.http.get<ChatParticipant[]>(`${environment.apiURL}/chat-participants`).pipe(
@@ -63,5 +64,21 @@ export class ChatParticipantService {
       catchError(err => throwError(() => err))
    )
   }
+
+  get isChatCreated(): boolean {
+      return this._isChatCreated;
+    }
+
+    set isChatCreated(value: boolean) {
+      if(value==true && this._isChatCreated==false) {
+          console.log('Zmieniono _isChatCreated z', this._isChatCreated, 'na', 'true');
+          this._isChatCreated = value;
+          this.socketService.sendMessage("Napisałem początek!");
+      }
+      else if(value==false && this._isChatCreated==true) {
+          console.log('Zmieniono _isChatCreated z', this._isChatCreated, 'na', 'false');
+          this._isChatCreated = value;
+      }
+    }
 
 }

@@ -2,6 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { ChatParticipant } from '../../models/chat-participant.interface';
 import { ChatParticipantService } from '../../services/chat-participant.service';
+import { SocketService } from 'src/app/socket.service';
+
 
 @Component({
   selector: 'app-chat-participant-form',
@@ -20,7 +22,7 @@ export class ChatParticipantFormComponent implements OnInit {
 
   chatParticipantService: ChatParticipantService;
 
-  constructor(private fb: FormBuilder,
+  constructor(private socketService: SocketService,private fb: FormBuilder,
       chatParticipantService: ChatParticipantService
   ) {
     this.chatParticipantService=chatParticipantService;
@@ -82,7 +84,9 @@ export class ChatParticipantFormComponent implements OnInit {
 
     this.chatParticipantService.chatWith=this.form.value.chatWith;
     localStorage.removeItem('createdAt');
-    this.action.emit({value: this.form.value, action: this.actionButtonLabel})
+    this.action.emit({value: this.form.value, action: this.actionButtonLabel});
+    this.socketService.sendMessage("Napisałem!");
+
   }
 
   clear() {

@@ -15,7 +15,7 @@ import { filter } from 'rxjs/operators';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/state/app.state';
 import { BlockedUsersListActions } from 'src/app/blocked-users-list/state/blocked-users-list.actions';
-
+import { SocketService } from 'src/app/socket.service';
 
 @Component({
   selector: 'app-chat-participant-list',
@@ -50,7 +50,8 @@ export class ChatParticipantListComponent implements OnInit,OnChanges {
   constructor(chatParticipantService: ChatParticipantService,
       blockedUsersListService: BlockedUsersListService,
       userService: UserService,
-      private store: Store<AppState>) {
+      private store: Store<AppState>,
+      private socketService: SocketService) {
     this.chatParticipantService=chatParticipantService;
     this.blockedUsersListService=blockedUsersListService;
     this.userService=userService;
@@ -152,7 +153,7 @@ export class ChatParticipantListComponent implements OnInit,OnChanges {
       mailName: this.chatParticipantService.chatWith
     });
 
-    setInterval(() =>{
+    /*setInterval(() =>{
         if(localStorage.getItem("mainPage")=="true" && localStorage.getItem("refresh")=='true') {
             this.store.dispatch({type: BlockedUsersListActions.GET_BLOCKED_USERS_LIST_LIST});
             if(this.blockedUsersLists!=undefined && this.blockedUsersLists) {
@@ -160,7 +161,7 @@ export class ChatParticipantListComponent implements OnInit,OnChanges {
                 //this.checkIfUserEmailFoundAndNotBlocked();
             }
         }
-    },30000);
+    },30000);*/
 
   }
 
@@ -172,7 +173,10 @@ export class ChatParticipantListComponent implements OnInit,OnChanges {
   selectChatParticipant(chatParticipant: ChatParticipant, action: TableActions) {
     if(localStorage.getItem("mainPage")=="true"){
         if((this.isViewAction(action) && localStorage.getItem('userEmail')==chatParticipant.speaker) ||
-        this.isDeleteAction(action)) this.chatParticipant.emit({chatParticipant, action});
+        this.isDeleteAction(action)) {
+            this.chatParticipant.emit({chatParticipant, action});
+            if(this.isDeleteAction(action) ) this.socketService.sendMessage("Napisałem!");
+        }
         if(this.isViewAction(action)) localStorage.setItem('mainPage',"false");
     }
   }
