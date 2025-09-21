@@ -46,6 +46,7 @@ On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: ğ—¹ğ
 - NGRX
 - Maven
 - PostgreSQL
+- Socket IO
 
 ## Swagger
 http://localhost:8080/swagger-ui/index.html
@@ -90,6 +91,7 @@ I am using IntelliJ Idea:
 7. Saving chat messages in database chronologically.
 8. Making Swagger.
 9. Using web sockets.
+
 
 
 
