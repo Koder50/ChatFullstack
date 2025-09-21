@@ -33,7 +33,11 @@ export class SocketService {
                this.initBlockedInForm();
             }
             this.deleteTooOldPosts();
-            this.store.dispatch({type: ChatParticipantActions.GET_CHAT_PARTICIPANT_LIST});
+            console.log("Przed");
+            setTimeout(()=>{
+                this.store.dispatch({type: ChatParticipantActions.GET_CHAT_PARTICIPANT_LIST});
+                console.log("Po");
+            },5000);
 
     });
   }
