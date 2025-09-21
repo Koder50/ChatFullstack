@@ -11,6 +11,7 @@ import { SocketService } from 'src/app/socket.service';
 export class ChatParticipantService {
 
   private _isChatCreated:boolean = false;
+  private _isAddedOrRemoved:boolean = false;
   chatWith: string;
   blocked: string[]=[];
 
@@ -65,20 +66,38 @@ export class ChatParticipantService {
    )
   }
 
+  //getters and setters detects changes of value of the object, thanks to this also chat works in real time
   get isChatCreated(): boolean {
       return this._isChatCreated;
     }
 
-    set isChatCreated(value: boolean) {
-      if(value==true && this._isChatCreated==false) {
-          console.log('Zmieniono _isChatCreated z', this._isChatCreated, 'na', 'true');
-          this._isChatCreated = value;
-          this.socketService.sendMessage("Napisałem początek!");
-      }
-      else if(value==false && this._isChatCreated==true) {
-          console.log('Zmieniono _isChatCreated z', this._isChatCreated, 'na', 'false');
-          this._isChatCreated = value;
-      }
+  set isChatCreated(value: boolean) {
+    if(value==true && this._isChatCreated==false) {
+       console.log('Zmieniono _isChatCreated z', this._isChatCreated, 'na', 'true');
+       this._isChatCreated = value;
+       this.socketService.sendMessage("Napisałem początek!");
     }
+    else if(value==false && this._isChatCreated==true) {
+       console.log('Zmieniono _isChatCreated z', this._isChatCreated, 'na', 'false');
+       this._isChatCreated = value;
+    }
+  }
+
+  get isAddedOrRemoved(): boolean {
+        return this._isAddedOrRemoved;
+      }
+
+  set isAddedOrRemoved(value: boolean) {
+     if(value==true && this._isAddedOrRemoved==false) {
+        console.log('Zmieniono _isAddedOrRemoved z', this._isAddedOrRemoved, 'na', 'true');
+        this._isAddedOrRemoved = value;
+        this.socketService.sendMessage("Napisałem początek!");
+        this._isAddedOrRemoved = false;
+     }
+     else if(value==false && this._isAddedOrRemoved==true) {
+        console.log('Zmieniono _isAddedOrRemoved z', this._isAddedOrRemoved, 'na', 'false');
+        this._isAddedOrRemoved = value;
+     }
+  }
 
 }
