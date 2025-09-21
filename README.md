@@ -87,10 +87,11 @@ I am using IntelliJ Idea:
 3. Setting blocked persons' list.
 4. Logging to app for many accounts simultaneously.
 5. Making each account see only chat with selected other person.
-6. Making possible multiple different chats simultaneously for one account(condition: different devices or incognito mode - for each one instance of chat).
+6. Making possible multiple different chats simultaneously for one account(condition: different devices or different web browsers - for each one instance of chat).
 7. Saving chat messages in database chronologically.
 8. Making Swagger.
 9. Using web sockets.
+
 
 
 
