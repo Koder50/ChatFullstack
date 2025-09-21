@@ -27,17 +27,12 @@ export class SocketService {
 
     this.socket.on("reply", (msg: string) => {
             console.log("W kliencie!");
-            console.log("Jest 9");
             this.store.dispatch({type: BlockedUsersListActions.GET_BLOCKED_USERS_LIST_LIST});
             if(this.blockedUsersLists!=undefined && this.blockedUsersLists) {
                this.initBlockedInForm();
             }
             this.deleteTooOldPosts();
-            console.log("Przed");
-            setTimeout(()=>{
-                this.store.dispatch({type: ChatParticipantActions.GET_CHAT_PARTICIPANT_LIST});
-                console.log("Po");
-            },5000);
+            this.store.dispatch({type: ChatParticipantActions.GET_CHAT_PARTICIPANT_LIST});
 
     });
   }
