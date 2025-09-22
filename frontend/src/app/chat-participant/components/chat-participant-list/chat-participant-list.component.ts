@@ -263,7 +263,7 @@ export class ChatParticipantListComponent implements OnInit,OnChanges {
 
   createChat() {
     this.chatParticipantService.chatWith=this.personForm.controls['mailName'].value;
-    this.chatParticipantService.isChatCreated=true;
+    this.chatParticipantService.toggleIsChatCreated=true;
     this.isUserEmailFoundAndNotBlocked=!this.isUserEmailFoundAndNotBlocked;
   }
 
