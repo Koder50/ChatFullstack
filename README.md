@@ -1,6 +1,6 @@
 # ChatFullstack
 
-A fullstack chat application where **two users can communicate privately**.  
+A real time fullstack chat application where **two users can communicate privately**.  
 Multiple users can be logged in simultaneously, chats are persisted in a database, and chat history is automatically deleted every hour (demo mode).  
 
 ## Live Demo
@@ -91,6 +91,7 @@ I am using IntelliJ Idea:
 7. Saving chat messages in database chronologically.
 8. Making Swagger.
 9. Using web sockets.
+
 
 
 
