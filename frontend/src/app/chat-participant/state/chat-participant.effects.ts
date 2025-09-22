@@ -35,7 +35,7 @@ export class ChatParticipantEffects {
         mergeMap((data: {type: string, payload: ChatParticipant}) => this.chatParticipantService.addChatParticipant(data.payload)
           .pipe(
             map(chatParticipants => ({ type: ChatParticipantActions.ADD_CHAT_PARTICIPANT_STATE, chatParticipant: data.payload })),
-            tap(() =>{  this.router.navigate(["chat-participants"]); this.chatParticipantService.isAddedOrRemoved=true; }),
+            tap(() =>{  this.router.navigate(["chat-participants"]); this.chatParticipantService.toggleAndBackIsAddedOrRemoved=true; }),
             catchError(() => EMPTY)
           ))
         )
@@ -47,7 +47,7 @@ export class ChatParticipantEffects {
         mergeMap((data: {type: string, payload: ChatParticipant}) => this.chatParticipantService.updateChatParticipant(data.payload.id, data.payload)
           .pipe(
             map(chatParticipants => ({ type: ChatParticipantActions.MODIFY_CHAT_PARTICIPANT_STATE, chatParticipant: data.payload })),
-            tap(() =>{  this.router.navigate(["chat-participants"]); this.chatParticipantService.isAddedOrRemoved=true;}),
+            tap(() =>{  this.router.navigate(["chat-participants"]); this.chatParticipantService.toggleAndBackIsAddedOrRemoved=true;}),
             catchError(() => EMPTY)
           ))
         )
@@ -60,7 +60,7 @@ export class ChatParticipantEffects {
         mergeMap((data: { payload: string}) => this.chatParticipantService.deleteChatParticipant(data.payload)
           .pipe(
             map(() => ({ type: ChatParticipantActions.REMOVE_CHAT_PARTICIPANT_STATE, chatParticipantId: data.payload })),
-            tap(() =>{  this.chatParticipantService.isAddedOrRemoved=true;}),
+            tap(() =>{  this.chatParticipantService.toggleAndBackIsAddedOrRemoved=true;}),
             catchError(() => EMPTY)
           ))
         )
@@ -74,7 +74,7 @@ export class ChatParticipantEffects {
         forkJoin([...data.payload.map((id) => this.chatParticipantService.deleteChatParticipant(id))])
           .pipe(
             map(() => ({ type: ChatParticipantActions.REMOVE_ALL_CHAT_PARTICIPANT_STATE })),
-            tap(() =>{  this.chatParticipantService.isAddedOrRemoved=true;}),
+            tap(() =>{  this.chatParticipantService.toggleAndBackIsAddedOrRemoved=true;}),
             catchError(() => EMPTY)
           ))
         )
