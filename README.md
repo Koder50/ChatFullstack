@@ -4,7 +4,7 @@ A fullstack chat application where **two users can communicate privately**.
 Multiple users can be logged in simultaneously, chats are persisted in a database, and chat history is automatically deleted every hour (demo mode).  
 
 ## Live Demo
-localhost:8080 : logging extends functionality; 𝗹𝗼𝗴𝗶𝗻: student@mail.com, 𝗽𝗮𝘀𝘀: Chatanti1; 𝗹𝗼𝗴𝗶𝗻: teacher@mail.com, 𝗽𝗮𝘀𝘀: Chatanti1<br>
+localhost:4200 : logging extends functionality; 𝗹𝗼𝗴𝗶𝗻: student@mail.com, 𝗽𝗮𝘀𝘀: Chatanti1; 𝗹𝗼𝗴𝗶𝗻: teacher@mail.com, 𝗽𝗮𝘀𝘀: Chatanti1<br>
 On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: 𝗹𝗼𝗴𝗶𝗻: karol@mail7.com, 𝗽𝗮𝘀𝘀: Chatanti1; 𝗹𝗼𝗴𝗶𝗻: karol@mail8.com, 𝗽𝗮𝘀𝘀: Chatanti2
 
 ## Features:  
@@ -57,7 +57,7 @@ I am using IntelliJ Idea:
 
 1. Download Zip File from github(on main page of repository find green button 'Code', click it and then find and click 'Download Zip')
 2. Open this project in IntelliJ Idea
-3. If needed in terminal install WebSocket(Socket IO) server and client: npm install express socket.io then npm install socket.io-client
+3. If needed in terminal install WebSocket(Socket IO) server and client: (from project go cd frontend) and then type npm install express socket.io then npm install socket.io-client
 4. If needed in terminal install npm install --save-dev concurrently (it enables running angular and socket concurrently). Now after doing instruction everything should work automatically(web socket running also).
 5. Right click on the project name(Top left), it should be 'ChatFullstack [superheroes]'
 6. Choose in the bottom 'Maven' -> 'Run Maven' -> 'Clean install' After about few minutes there should be one of messages: 'Build success'.
@@ -91,6 +91,7 @@ I am using IntelliJ Idea:
 7. Saving chat messages in database chronologically.
 8. Making Swagger.
 9. Using web sockets.
+
 
 
 
