@@ -71,7 +71,7 @@ export class ChatParticipantService {
       return this._isChatCreated;
     }
 
-  set isChatCreated(value: boolean) {
+  set toggleIsChatCreated(value: boolean) {
     if(value==true && this._isChatCreated==false) {
        console.log('Zmieniono _isChatCreated z', this._isChatCreated, 'na', 'true');
        this._isChatCreated = value;
@@ -83,11 +83,15 @@ export class ChatParticipantService {
     }
   }
 
+  set isChatCreated(value: boolean) {
+      this._isChatCreated = value;
+  }
+
   get isAddedOrRemoved(): boolean {
         return this._isAddedOrRemoved;
       }
 
-  set isAddedOrRemoved(value: boolean) {
+  set toggleAndBackIsAddedOrRemoved(value: boolean) {
      if(value==true && this._isAddedOrRemoved==false) {
         console.log('Zmieniono _isAddedOrRemoved z', this._isAddedOrRemoved, 'na', 'true');
         this._isAddedOrRemoved = value;
@@ -99,5 +103,9 @@ export class ChatParticipantService {
         this._isAddedOrRemoved = value;
      }
   }
+
+  set isAddedOrRemoved(value: boolean) {
+        this._isAddedOrRemoved = value;
+    }
 
 }
