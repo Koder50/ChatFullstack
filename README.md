@@ -10,7 +10,7 @@ On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: ùóπ
 ## Features:  
 - Two-user private chats  
 - User blocking  
-- Multiple simultaneous sessions (different browsers/incognito)  
+- Multiple simultaneous sessions (different browsers/devices)  
 - Automatic chat history cleanup  
 - Secure authentication with Spring Security  
 - Swagger API documentation
@@ -91,6 +91,7 @@ I am using IntelliJ Idea:
 7. Saving chat messages in database chronologically.
 8. Making Swagger.
 9. Using web sockets.
+
 
 
 
