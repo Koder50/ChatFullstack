@@ -1,0 +1,5 @@
+UPDATE chat_participant_entity
+SET talk_content = 'qwd 1'
+WHERE id = '4215f419-bdd4-462e-8b11-df61dffa3acc'::uuid;
+
+used in DBEAVER program, it is an example
