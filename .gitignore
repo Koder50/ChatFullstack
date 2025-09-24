@@ -135,3 +135,6 @@ testem.log
 Thumbs.db
 
 */node_modules/*
+
+# Angular cache
+frontend/.angular/cache/
