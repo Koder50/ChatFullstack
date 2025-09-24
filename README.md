@@ -46,6 +46,7 @@ On Heroku: https://anti-hero-fullstack-4cfbfc6dbb64.herokuapp.com Logging: ğ—¹ğ
 - NGRX
 - Maven
 - PostgreSQL
+- Lombok
 - Socket IO
 
 ## Swagger
