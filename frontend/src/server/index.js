@@ -29,7 +29,3 @@ io.on("connection", (socket) => {
 server.listen(3000, () => {
   console.log("🚀 Socket.io server running on http://localhost:3000");
 });
-
-afterAll(() => {
-  server.close();
-});
