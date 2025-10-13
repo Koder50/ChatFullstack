@@ -68,7 +68,7 @@ I am using IntelliJ Idea:
 10. Then choose name 'Chat' for example
 11. Then there should be Java 17 SDK of 'superheroes' module.
 12. Choose main class, there should be SuperheroesApplication and choose it
-13. Click apply and then ok. You should run it(press play in correct configuration): then go to the browser to localhost:8080 or localhost:8080/ or localhost:8080/login and there should be login page
+13. Click apply and then ok. You should run it(press play in correct configuration): then go to the browser to localhost:4200 or localhost:4200/ or localhost:4200/login and there should be login page
 14. To start program, on the bar on top to the left from play you have the name of configuration, choose 'Chat' and click play, the program starts. Clean install and Chat configuration both successfully working enables swagger ad application login.
 15. There is also Swagger. If the login data from CV is not working you have to in code delete 'Authorize' button, then create at least two users to talk(it should be emails, for example: student@mail.com, teacher@mail.com)
 16. Now you can log in. There you use chat.
