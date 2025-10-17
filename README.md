@@ -62,24 +62,25 @@ I am using IntelliJ Idea:
 4. If needed in terminal install ((from project path go cd frontend) and then type npm install --save-dev concurrently (it enables running angular and socket concurrently). Now after doing instruction(all 24) everything should work automatically(web socket running also).
 5. Right click on the project name(Top left), it should be 'ChatFullstack [superheroes]'
 6. Choose in the bottom 'Maven' -> 'Run Maven' -> 'Clean install' After about few minutes there should be one of messages: 'Build success'.
-7. In IDE search for the play on bar slightly to the left on top of program and choose the left option from play, Run/Debug Configurations and choose Edit Configurations
-8. Find '+' to the left on top (Add Configuration) and click it.
-9. Then choose Application
-10. Then choose name 'Chat' for example
-11. Then there should be Java 17 SDK of 'superheroes' module.
-12. Choose main class, there should be SuperheroesApplication and choose it
-13. Click apply and then ok. You should run it(press play in correct configuration): then go to the browser to localhost:4200 or localhost:4200/ or localhost:4200/login and there should be login page
-14. To start program, on the bar on top to the left from play you have the name of configuration, choose 'Chat' and click play, the program starts. Clean install and Chat configuration both successfully working enables swagger ad application login.
-15. There is also Swagger. If the login data from CV is not working you have to in code delete 'Authorize' button, then create at least two users to talk(it should be emails, for example: student@mail.com, teacher@mail.com)
-16. Now you can log in. There you use chat.
-17. If there is some kind of problem with login or logout you in program click ctrl+shift+R type public\\index.html (double '\\') and click enter(search)
-18. There should be one line found - double click on it. Now you have to specify those path for the current project path of index.html(find this file, right click on it choose 'Copy Path' and choose absolute path)
-19. Now do 4.(clean install) and do 12. ( run configuration). Check if login and logout works.
-20. If not, in program click ctrl+shift+R type frontend\src\index.html and click enter(search)
-21. There should be one line found - double click on it. Now you have to specify those path as public\\index.html
-22. Now do 4.(clean install) and do 12. ( run configuration). Check if login and logout works.
-23. Until now everything should work(as you see, you needed to experiment with index.html path). You can chat now, good luck.
-24. If there is some strange error after closing last running and trying next one, you should try to close node.js (server of socket io - web socket library) in task manager.
+7. In terminal you should run npm run start:all
+8. In IDE search for the play on bar slightly to the left on top of program and choose the left option from play, Run/Debug Configurations and choose Edit Configurations
+9. Find '+' to the left on top (Add Configuration) and click it.
+10. Then choose Application
+11. Then choose name 'Chat' for example
+12. Then there should be Java 17 SDK of 'superheroes' module.
+13. Choose main class, there should be SuperheroesApplication and choose it
+14. Click apply and then ok. You should run it(press play in correct configuration): then go to the browser to localhost:4200 or localhost:4200/ or localhost:4200/login and there should be login page
+15. To start program, on the bar on top to the left from play you have the name of configuration, choose 'Chat' and click play, the program starts. Clean install and Chat configuration both successfully working enables swagger ad application login.
+16. There is also Swagger. If the login data from CV is not working you have to in code delete 'Authorize' button, then create at least two users to talk(it should be emails, for example: student@mail.com, teacher@mail.com)
+17. Now you can log in. There you use chat.
+18. If there is some kind of problem with login or logout you in program click ctrl+shift+R type public\\index.html (double '\\') and click enter(search)
+19. There should be one line found - double click on it. Now you have to specify those path for the current project path of index.html(find this file, right click on it choose 'Copy Path' and choose absolute path)
+20. Now do 4.(clean install) and do 12. ( run configuration). Check if login and logout works.
+21. If not, in program click ctrl+shift+R type frontend\src\index.html and click enter(search)
+22. There should be one line found - double click on it. Now you have to specify those path as public\\index.html
+23. Now do 4.(clean install) and do 12. ( run configuration). Check if login and logout works.
+24. Until now everything should work(as you see, you needed to experiment with index.html path). You can chat now, good luck.
+25. If there is some strange error after closing last running and trying next one, you should try to close node.js (server of socket io - web socket library) in task manager.
 
 ## Challenges
 
@@ -92,6 +93,7 @@ I am using IntelliJ Idea:
 7. Saving chat messages in database chronologically.
 8. Making Swagger.
 9. Using web sockets.
+
 
 
 
