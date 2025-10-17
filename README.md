@@ -62,7 +62,7 @@ I am using IntelliJ Idea:
 4. If needed in terminal install ((from project path go cd frontend) and then type npm install --save-dev concurrently (it enables running angular and socket concurrently). Now after doing instruction(all 24) everything should work automatically(web socket running also).
 5. Right click on the project name(Top left), it should be 'ChatFullstack [superheroes]'
 6. Choose in the bottom 'Maven' -> 'Run Maven' -> 'Clean install' After about few minutes there should be one of messages: 'Build success'.
-7. In terminal you should run npm run start:all
+7. In terminal you should run 'npm run start:all'
 8. In IDE search for the play on bar slightly to the left on top of program and choose the left option from play, Run/Debug Configurations and choose Edit Configurations
 9. Find '+' to the left on top (Add Configuration) and click it.
 10. Then choose Application
@@ -93,6 +93,7 @@ I am using IntelliJ Idea:
 7. Saving chat messages in database chronologically.
 8. Making Swagger.
 9. Using web sockets.
+
 
 
 
